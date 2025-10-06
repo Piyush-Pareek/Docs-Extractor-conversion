@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>PDF Extractor Login</h2>
+    <form action="/login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember me</label><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <br>
+    <a href="/forgot-password">Forgot Password?</a><br><br>
+    <p>Don't have an account? <a href="/register">Sign up here</a></p>
+</body>
+</html>

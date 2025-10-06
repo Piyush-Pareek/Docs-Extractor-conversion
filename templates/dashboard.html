@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <hr>
+
+    
+    <h2>User Profile</h2>
+    <p>Name: xyz</p>
+    <p>Email: xyz@gmail.com</p>
+    <hr>
+
+    
+    <h2>Choose a Tool:</h2>
+    <ul>
+        <li><a href="/event-extractor">AI Event Extractor</a></li>
+        <li><a href="/pdf-to-word">Convert PDF to Word</a></li>
+        <li><a href="/image-to-text">Extract Text from Image</a></li>
+        <li><a href="/merge-pdf">Merge Multiple PDFs</a></li>
+        <li><a href="/split-pdf">Split PDF</a></li>
+        <li><a href="/pdf-to-text">Convert PDF to Text</a></li>
+        <li><a href="/word-to-pdf">Convert Word to PDF</a></li>
+    </ul>
+    <hr>
+
+    
+    <h2>Reports</h2>
+    <ul>
+        <li><a href="/recent-uploads">Recent Uploads</a></li>
+        <li><a href="/history">Extraction History</a></li>
+    </ul>
+    <hr>
+
+    
+    <h2>Feedback</h2>
+    <form>
+        <label for="feedback">Your feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+
+    
+    <p><a href="/logout">Logout</a></p>
+
+    
+    <footer>
+        <p>PDF Extractor Project  | Developed by Vansh verma</p>
+        <p> for more information contact me @ 7906802082 </p>
+    </footer>
+</body>
+</html>
