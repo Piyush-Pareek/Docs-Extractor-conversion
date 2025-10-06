@@ -3,55 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <h1>Welcome to the Dashboard</h1>
-    <hr>
+    <div class="section profile">
+        <h2>User Profile</h2>
+        <p><strong>Name:</strong> xyz</p>
+        <p><strong>Email:</strong> xyz@gmail.com</p>
+    </div>
 
-    
-    <h2>User Profile</h2>
-    <p>Name: xyz</p>
-    <p>Email: xyz@gmail.com</p>
-    <hr>
+    <div class="section tools">
+        <h2>Choose a Tool</h2>
+        <ul>
+            <li><a href="/event-extractor">AI Event Extractor</a></li>
+            <li><a href="/pdf-to-word">Convert PDF to Word</a></li>
+            <li><a href="/image-to-text">Extract Text from Image</a></li>
+            <li><a href="/merge-pdf">Merge Multiple PDFs</a></li>
+            <li><a href="/split-pdf">Split PDF</a></li>
+            <li><a href="/pdf-to-text">Convert PDF to Text</a></li>
+            <li><a href="/word-to-pdf">Convert Word to PDF</a></li>
+        </ul>
+    </div>
 
-    
-    <h2>Choose a Tool:</h2>
-    <ul>
-        <li><a href="/event-extractor">AI Event Extractor</a></li>
-        <li><a href="/pdf-to-word">Convert PDF to Word</a></li>
-        <li><a href="/image-to-text">Extract Text from Image</a></li>
-        <li><a href="/merge-pdf">Merge Multiple PDFs</a></li>
-        <li><a href="/split-pdf">Split PDF</a></li>
-        <li><a href="/pdf-to-text">Convert PDF to Text</a></li>
-        <li><a href="/word-to-pdf">Convert Word to PDF</a></li>
-    </ul>
-    <hr>
+    <div class="section reports">
+        <h2>Reports</h2>
+        <ul>
+            <li><a href="/recent-uploads">Recent Uploads</a></li>
+            <li><a href="/history">Extraction History</a></li>
+        </ul>
+    </div>
 
-    
-    <h2>Reports</h2>
-    <ul>
-        <li><a href="/recent-uploads">Recent Uploads</a></li>
-        <li><a href="/history">Extraction History</a></li>
-    </ul>
-    <hr>
+    <div class="section feedback">
+        <h2>Feedback</h2>
+        <form>
+            <label for="feedback">Your feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-    
-    <h2>Feedback</h2>
-    <form>
-        <label for="feedback">Your feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
-        <button type="submit">Submit</button>
-    </form>
-    <hr>
+    <p class="logout"><a href="/logout">Logout</a></p>
 
-    
-    <p><a href="/logout">Logout</a></p>
-
-    
     <footer>
-        <p>PDF Extractor Project  | Developed by Vansh verma</p>
-        <p> for more information contact me @ 7906802082 </p>
+        <p>PDF Extractor Project | Developed by Vansh Verma</p>
+        <p>Contact: 7906802082</p>
     </footer>
 </body>
 </html>
