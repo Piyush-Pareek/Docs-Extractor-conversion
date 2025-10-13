@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert TXT to PDF</title>
+    <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Convert TXT to PDF</h2>
+        <hr>
+
+        <form action="/convert_txt_to_pdf" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <p>Select a .txt file to upload:</p>
+                <input type="file" name="txt_file" accept=".txt" required>
+            </div>
+            <input type="submit" value="Convert to PDF">
+        </form>
+    </div>
+</body>
+</html>

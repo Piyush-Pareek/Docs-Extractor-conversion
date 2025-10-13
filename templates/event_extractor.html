@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Event Extractor</title>
+    <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+    <div class="container">
+        <h2>AI Event Extractor</h2>
+        <p>Upload a SoF document (PDF or Word) to extract events.</p>
+
+        <form action="/event-extractor" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Select Document:</label>
+                <input type="file" id="file" name="file" required>
+            </div>
+            <button type="submit" class="auth-button">Extract Events</button>
+        </form>
+    </div>
+</body>
+</html>
