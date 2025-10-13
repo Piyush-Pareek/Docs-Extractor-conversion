@@ -1,0 +1,129 @@
+/* --- Global Reset and Body Styles --- */
+body {
+    background-color: #0d1117; /* Dark background from login.css */
+    color: #e6edf3; /* Light grey text from dashboard.css */
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Blending common and dashboard fonts */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #58a6ff; /* Primary Blue accent from dashboard/login */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 5px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #30363d; /* Subtle divider */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* --- Container & Form Styles --- */
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #161b22; /* Lighter dark background for form box */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(35, 134, 54, 0.5); /* Soft green glow (from login.css) */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label, p {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #c9d1d9;
+}
+
+/* --- Input Styles --- */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #30363d;
+    border-radius: 5px;
+    background: #0d1117;
+    color: #f0f6fc;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    border-color: #58a6ff; /* Blue focus highlight */
+    outline: none;
+}
+
+/* Style for file input - common for utility pages */
+input[type="file"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #7ee787; /* Light green accent for file name */
+    box-sizing: border-box;
+}
+
+/* --- Button Styles --- */
+.auth-button, input[type="submit"] {
+    width: 100%;
+    background-color: #238636; /* Primary button green from login.css */
+    color: #fff;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover, input[type="submit"]:hover {
+    background-color: #2ea043;
+    box-shadow: 0 0 10px rgba(35, 134, 54, 0.9);
+}
+/* Style for textarea used in verifiable_pdf.html */
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border: 2px solid #30363d;
+    border-radius: 5px;
+    background: #0d1117;
+    color: #f0f6fc;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+textarea:focus {
+    border-color: #58a6ff;
+    outline: none;
+}
