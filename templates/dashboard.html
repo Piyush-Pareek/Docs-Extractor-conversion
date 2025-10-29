@@ -1,57 +1,40 @@
+<!-- templates/dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard - Document Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Dashboard</h1>
-    <hr>
+    <div class="container">
+        <h1>Document Processing Hub</h1>
+        <hr>
 
-    
-    <h2>User Profile</h2>
-    <p>Name: xyz</p>
-    <p>Email: xyz@gmail.com</p>
-    <hr>
+        <div class="dashboard-section">
+            <h2>Core Tools</h2>
+            <ul class="tool-list">
+                <!-- These links match our official Phase 2 plan -->
+                <li><a href="{{ url_for('txt_to_pdf') }}">Convert TXT to PDF</a></li>
+                <li><a href="{{ url_for('encrypt_pdf') }}">Encrypt PDF (Add Password)</a></li>
+                <li><a href="{{ url_for('find_by_pattern') }}">Find by Pattern & Export to Excel</a></li>
+                <li><a href="{{ url_for('create_verifiable_pdf') }}">Create Verifiable PDF with QR Code</a></li>
+            </ul>
+        </div>
 
-    
-    <h2>Choose a Tool:</h2>
-    <ul>
-        <li><a href="/event-extractor">AI Event Extractor</a></li>
-        <li><a href="/pdf-to-word">Convert PDF to Word</a></li>
-        <li><a href="/image-to-text">Extract Text from Image</a></li>
-        <li><a href="/merge-pdf">Merge Multiple PDFs</a></li>
-        <li><a href="/split-pdf">Split PDF</a></li>
-        <li><a href="/pdf-to-text">Convert PDF to Text</a></li>
-        <li><a href="/word-to-pdf">Convert Word to PDF</a></li>
-    </ul>
-    <hr>
+        <div class="dashboard-section">
+            <h2>Extra Tools (If time permits)</h2>
+            <ul class="tool-list">
+                <li><a href="{{ url_for('decrypt_pdf') }}">Decrypt PDF (Remove Password)</a></li>
+            </ul>
+        </div>
+        
+        <hr>
+        <p><a href="{{ url_for('logout') }}">Logout</a></p>
 
-    
-    <h2>Reports</h2>
-    <ul>
-        <li><a href="/recent-uploads">Recent Uploads</a></li>
-        <li><a href="/history">Extraction History</a></li>
-    </ul>
-    <hr>
-
-    
-    <h2>Feedback</h2>
-    <form>
-        <label for="feedback">Your feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
-        <button type="submit">Submit</button>
-    </form>
-    <hr>
-
-    
-    <p><a href="/logout">Logout</a></p>
-
-    
-    <footer>
-        <p>PDF Extractor Project  | Developed by Vansh verma</p>
-        <p> for more information contact me @ 7906802082 </p>
-    </footer>
+        <footer>
+            <p>Document Hub Project | Developed by Team [Your Team Name]</p>
+        </footer>
+    </div>
 </body>
 </html>

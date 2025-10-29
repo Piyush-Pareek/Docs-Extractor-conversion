@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Verifiable PDF with QR Code</title>
+</head>
+<body>
+    <h2 align="center">Create Verifiable PDF with QR Code</h2>
+    <hr>
+
+        <form action="{{ url_for('create_verifiable_pdf') }}" method="post">
+        <p>Enter the circular content:</p>
+        <textarea name="circular_text" rows="10" cols="60" placeholder="Paste your circular text here..." required></textarea><br><br>
+
+        <p>Enter the Official Source URL:</p>
+        <input type="text" name="source_url" size="60" placeholder="https://example.com" required><br><br>
+
+        <input type="submit" value="Generate Verifiable PDF">
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find by Pattern</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Find Pattern & Export to Excel</h2>
+        <p>Upload a document and select a pre-defined pattern to find all matches.</p>
+        
+        <form action="{{ url_for('find_by_pattern') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="input_file">Select Document:</label>
+                <input type="file" id="input_file" name="input_file" required accept=".pdf,.txt">
+            </div>
+            
+            <div class="form-group">
+                <label for="pattern_choice">Select a Pattern to Find:</label>
+                <select id="pattern_choice" name="pattern_choice" required>
+                    <option value="" disabled selected>--Choose a pattern--</option>
+                    <option value="email">Email Addresses</option>
+                    <option value="phone">Phone Numbers</option>
+                    <option value="date">Dates</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="auth-button">Find & Export</button>
+        </form>
+    </div>
+</body>
+</html>
