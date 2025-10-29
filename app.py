@@ -50,8 +50,10 @@ def logout():
     session.pop('username', None)
     return render_template('logout.html')
 
-#  Routes of  4 Core Features ---
-
+@app.route('/about-us')
+def about_us():
+    # New code: renders the HTML file
+    return render_template('about_us.html')
 @app.route('/txt-to-pdf', methods=['GET', 'POST'])
 def txt_to_pdf():
     if request.method == 'POST':

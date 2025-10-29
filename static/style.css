@@ -1,0 +1,181 @@
+/* static/style.css */
+
+/* --- Global Reset and Body Styles --- */
+body {
+    background-color: #0d1117; /* Dark background */
+    color: #e6edf3; /* Light grey text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean sans-serif font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #58a6ff; /* Primary Blue accent */
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    border-bottom: 2px solid #30363d;
+}
+
+h2 {
+    border-bottom: 1px solid #30363d;
+    display: inline-block; /* Keep border only under text */
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #30363d; /* Subtle divider */
+    width: 100%;
+    margin: 30px 0;
+}
+
+a {
+    color: #58a6ff; /* Blue for links */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1f6feb; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* --- Main Content Container --- */
+.container {
+    max-width: 600px; /* Limit width for readability */
+    width: 95%;
+    margin: 20px auto;
+    padding: 30px;
+    background: #161b22; /* Lighter dark background for content box */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.15); /* Soft blue glow */
+    text-align: center; /* Center align text in container by default */
+}
+
+/* --- Form Styles --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make form elements take full width */
+    background: #161b22;
+    padding: 20px; /* Reduced padding slightly */
+    border-radius: 8px; /* Slightly smaller radius */
+    text-align: left; /* Align labels and inputs left */
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Consistent spacing */
+    width: 100%;
+}
+
+label, p {
+    display: block;
+    margin-bottom: 8px; /* Slightly more space */
+    font-weight: 500;
+    color: #c9d1d9; /* Lighter grey for labels */
+}
+
+/* --- Input Styles (Text, Password, URL, File) --- */
+input[type="text"],
+input[type="password"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #30363d; /* Slightly lighter border */
+    border-radius: 6px;
+    background: #0d1117;
+    color: #f0f6fc; /* White text */
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #58a6ff; /* Blue focus highlight */
+    outline: none;
+    box-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+}
+
+textarea {
+    min-height: 150px; /* Default height */
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Specific styling for file inputs */
+input[type="file"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #7ee787; /* Light green accent */
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none; /* No border for file input */
+}
+
+/* --- Button Styles --- */
+.auth-button, input[type="submit"] {
+    width: 100%;
+    background-color: #238636; /* Primary button green */
+    color: #ffffff;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover, input[type="submit"]:hover {
+    background-color: #2ea043; /* Slightly lighter green on hover */
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.7);
+}
+
+/* --- Dashboard Specific Styles --- */
+.dashboard-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #0d1117; /* Even darker background for sections */
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.dashboard-section h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.tool-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tool-list li {
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #8b949e; /* Muted grey for footer */
+    border-top: 1px solid #30363d;
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+}

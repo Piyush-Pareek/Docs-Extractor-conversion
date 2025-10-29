@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Convert TXT to PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2 align="center">Convert TXT to PDF</h2>
-    <hr>
-
-<form action="{{ url_for('txt_to_pdf') }}" method="post" enctype="multipart/form-data">        <p>Select a .txt file to upload:</p>
-        <input type="file" name="txt_file" accept=".txt" required><br><br>
-        <input type="submit" value="Convert to PDF">
-    </form>
+    <div class="container">
+        <h2>Convert TXT to PDF</h2>
+        <p>Upload a plain text (.txt) file to convert it into a PDF document.</p>
+        
+        <form action="{{ url_for('txt_to_pdf') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="txt_file">Select TXT File:</label>
+                <input type="file" id="txt_file" name="txt_file" required accept=".txt">
+            </div>
+            <button type="submit" class="auth-button">Convert to PDF</button>
+        </form>
+    </div>
 </body>
 </html>
