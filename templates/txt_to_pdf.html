@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert TXT to PDF</title>
+</head>
+<body>
+    <h2 align="center">Convert TXT to PDF</h2>
+    <hr>
+
+<form action="{{ url_for('txt_to_pdf') }}" method="post" enctype="multipart/form-data">        <p>Select a .txt file to upload:</p>
+        <input type="file" name="txt_file" accept=".txt" required><br><br>
+        <input type="submit" value="Convert to PDF">
+    </form>
+</body>
+</html>
