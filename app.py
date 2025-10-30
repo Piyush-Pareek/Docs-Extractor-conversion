@@ -8,42 +8,44 @@ import re
 from openpyxl import Workbook
 import qrcode
 from io import BytesIO
-app = Flask(__name__)
+app = Flask(__name__)  # main class app obj
 
 app = Flask(__name__)
-app.secret_key = 'your_super_secret_key_here' #?????/
-# --- Folder Setup ---
-UPLOAD_FOLDER = 'uploads'
+app.secret_key = 'your_super_secret_key_here' #secret key that my server knows only menas my browsers 
+#creating Folders
+UPLOAD_FOLDER = 'uploads' #simple variables
 DOWNLOAD_FOLDER = 'downloads'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)   # uses python os lib to create the folders if exit true then do nothing if not writeen give an error
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
 
 # Main Navigation Route
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])  #decorator it tells that if someonr visits login url run this dun
+#GET: This is what happens when a user just visits the page (like typing the address or clicking a link). They are getting the page to look
+
+# POST: This is what happens when a user submits the login form. They are posting data (username and password) to the server.
 def login():
-    if request.method == 'POST':
+    if request.method == 'POST': #request is an object that hold the incoming data
         username = request.form['username']
         password = request.form['password']
         
       #  login code here 
         # Save the user's login state in the session
-        session['username'] = username
+        session['username'] = username # session is an object work as temprory storage box
         
         return redirect(url_for('dashboard'))
     
     return render_template('login.html')
 @app.route('/')
 def home():
-    # The main page of our app is the dashboard
+    # The main page of our app is the login
     return render_template('login.html')
 
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
 
-# In app.py, replace your old logout function
 @app.route('/logout')
 def logout():
     # Clear the username from the session
@@ -52,7 +54,6 @@ def logout():
 
 @app.route('/about-us')
 def about_us():
-    # New code: renders the HTML file
     return render_template('about_us.html')
 @app.route('/txt-to-pdf', methods=['GET', 'POST'])
 def txt_to_pdf():
